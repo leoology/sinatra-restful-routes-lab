@@ -1,3 +1,4 @@
+require './config/environment'
 class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
@@ -13,7 +14,7 @@ class ApplicationController < Sinatra::Base
     erb :index   
   end
 
-  get 'recipes/new' do
+  get '/recipes/new' do
     erb :new
   end
 
